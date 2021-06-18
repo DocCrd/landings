@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" id="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Вёрстка странички</title>
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/select.css" rel="stylesheet" />
+  <script src="js/script.js"></script>
+</head>
+
+<body>
+  <video autoplay muted loop id="myVideo" onload="pstarter()">
+    <source src="vid/Puppies.mp4" type="video/mp4">
+  </video>
+
+  <video autoplay muted loop id="flVideo">
+    <source src="vid/Flowers.mp4" type="video/mp4">
+  </video>
+  <!-- header -->
+  <header class="header">
+    <div class="logotype">
+      <img src="img/contacts.png" alt="" class="logo">
+      <p class="logotype__label">devepoment</p>
+    </div>
+    <div class="contacts">
+      <p class="contacts__phone contacts__phone_white">8 800 222-37-90</p>
+      <p class="contacts__phone contacts__phone_halfwhite">Работаем ежедневно с 10:00 до 20:00</p>
+      <img class="contacts__icon" src="css/icons/phone.png" alt="">
+    </div>
+    <div class="menu">
+      <a href="#" class="menu__href">
+        <p class="menu__label" onmouseover="scrollLabel(this)">Квартиры</p>
+        <p class="menu__label" onmouseout="timerRub(this)">Квартиры</p>
+      </a>
+      <a href="#" class="menu__href">
+        <p class="menu__label">Ипотека</p>
+      </a>
+      <a href="#" class="menu__href">
+        <p class="menu__label">Коммерция</p>
+      </a>
+      <a href="#" class="menu__href">
+        <p class="menu__label">Управляющая компания</p>
+      </a>
+      <img class="menu__icon" src="css/icons/menu.png" alt="">
+    </div>
+  </header>
+  <!-- end of header -->
+  <!-- body content -->
+  <div class="container">
+    <div class="sticker">
+      <img src="img/flag.png" alt="" class="sticker__node">
+      <ul class="sticker__social-icons">
+        <li><a href="http://www.facebook.com"><img class="sticker__img" src="css/icons/fb.png" /></a></li>
+        <li><a href="https://www.instagram.com"><img class="sticker__img" src="css/icons/ig.png" /></a></li>
+        <li><a href="http://www.youtube.com"><img class="sticker__img" src="css/icons/yt.png" /></a></li>
+        <li><a href="https://www.whatsapp.com"><img class="sticker__img" src="css/icons/wp.png" /></a></li>
+      </ul>
+    </div>
+    <div class="preview">
+      <div class="duo-table">
+        <ul class="duo-table__stak">
+          <li>
+            <p class="duo-table__text" onmouseover="showView(this.textContent)" onmouseout="closeView(this.textContent)">Северный парк</p>
+          </li>
+          <li>
+            <p class="duo-table__text">Станция Столичная</p>
+          </li>
+          <li>
+            <p class="duo-table__text">Лето</p>
+          </li>
+          <li>
+            <p class="duo-table__text">Сказочный сад</p>
+          </li>
+          <li>
+            <p class="duo-table__text">Краски</p>
+          </li>
+        </ul>
+        <ul class="duo-table__stak">
+          <li>
+            <p class="duo-table__text">Ренесанс</p>
+          </li>
+          <li>
+            <p class="duo-table__text">Компасс сити</p>
+          </li>
+          <li>
+            <p class="duo-table__text">Бруклин</p>
+          </li>
+          <li>
+            <p class="duo-table__text">Манблан</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="preview__zone">
+        <img class="preview__image" src="img/alikemc.jpg">
+        <h2>Wat doen we en hoe doen we het?</h2>
+        <p>Wat wij doen is het maken van complete huisstijlen, visitekaartjes en websites we doen dit in samenwerking met de klant.</p>
+      </div>
+
+
+    </div>
+    <div class="choosing">
+      <h1 class="choosing__header">Стильная архитектура и виды из окон будущей квартиры не оставят равнодушных</h1>
+      <div class="choosing__menu">
+        <button class="button choosing__button" type="button" name="button">+ Выбрать квартиру</button>
+        <a class="choosing__href" href="#">
+          <p>Купить квартиру онлайн ></p>
+        </a>
+      </div>
+    </div>
+    <div class="pdu">
+      <button class="button button-left pdu__button" onclick="leftBClick()">
+        < </button> <button class="button button-right pdu__button" onclick="rightBClick()">
+          >
+      </button>
+    </div>
+    <!-- end of BoCt -->
+  </div>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer__item-one">
+      <div class="room-qnt">
+        <p class="footer__label">Колличество комнат</p>
+        <table class="table" cellspacing="0">
+          <tr class="table__row">
+            <td class="table__el">студия</td>
+            <td class="table__el">1</td>
+            <td class="table__el">2</td>
+            <td class="table__el">3</td>
+            <td class="table__el">4</td>
+          </tr>
+        </table>
+      </div>
+      <div class="squares">
+        <p class="footer__label">Площадь</p>
+        <table class="table" cellspacing="0">
+          <tr class="table__row">
+            <td class="table__el squares__el">
+              <p class="table__label">от <input type="text" class="input table__input" value="32" maxlength="3" />м<sup><small>2</small></sup>
+              </p>
+            </td>
+            <td class="table__el squares__el">
+              <p class="table__label">до <input type="text" class="input table__input" value="108" maxlength="3" />м<sup><small>2</small></sup>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="cost">
+        <p class="footer__label">Стоимость, млн ₽</p>
+        <table class="table" cellspacing="0">
+          <tr class="table__row">
+            <td class="table__el">
+              <p class="table__label">от<input type="text" class="input table__input" value="1,5" maxlength="3" /></p>
+            </td>
+            <td class="table__el">
+              <p class="table__label">до<input type="text" class="input table__input" value="17,5" maxlength="3" /></p>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="complex-choosing">
+        <p class="footer__label ">Жилой комплекс</p>
+        <table class="table" cellspacing="0">
+          <tr class="table__row">
+            <td class="table__el complex-choosing__el">
+              <div class="custom-select">
+                <select>
+                  <option value="0">Северный парк</option>
+                  <option value="1">Станция Столичная</option>
+                  <option value="2">Лето</option>
+                  <option value="3">Сказочный сад</option>
+                  <option value="4">Краски</option>
+                  <option value="5">Ренесанс</option>
+                  <option value="6">Компасс сити</option>
+                  <option value="7">Бруклин</option>
+                  <option value="8">Манблан</option>
+                </select>
+              </div>
+            </td>
+          </tr>
+        </table>
+
+      </div>
+    </div>
+    <div class="footer__item-two">
+      <div class="footer_philters">
+        <button class="button footer__button_ic" type="button"><img class="button__icon" src="css/icons/settings.png" alt=""><p class="button__label"></p>Еще фильтры</button>
+      </div>
+      <div class="footer_philters">
+        <button class="button footer__button_red" type="button">Показать 120 квартир</button>
+      </div>
+    </div>
+  </footer>
+  <script type="text/javascript">
+    var rub = false
+    var obj = []
+    var showView = function(text) {
+      rub = true
+      var counter = 20
+      document.querySelector('.preview__zone').style.opacity = '0'
+      document.querySelector('.preview__zone').style.paddingTop = '20px'
+      obj[20] = setTimeout(() => {
+        if (rub) {
+          document.querySelector('.preview__zone').style.display = 'block'
+        }
+      }, 0);
+
+      if (document.querySelector('.preview__zone').style.opacity !== '0') {
+        var counter = Number.parseFloat(document.querySelector('.preview__zone').style.opacity) / 0.05;
+      }
+      var adding = Number.parseFloat(document.querySelector('.preview__zone').style.opacity)
+      for (var i = 0; i < counter; i++) {
+        obj[i] = setTimeout(() => {
+          if (rub && document.querySelector('.preview__zone').style.opacity >= 0) {
+            adding += 0.05
+            document.querySelector('.preview__zone').style.opacity = adding
+            document.querySelector('.preview__zone').style.paddingTop = (/\d+/.exec(document.querySelector('.preview__zone').style.paddingTop)[0] - 1) + 'px'
+          }
+        }, 25 * i);
+      }
+    }
+
+    var closeView = function(text) {
+      rub = false
+      var counter = Number.parseFloat(document.querySelector('.preview__zone').style.opacity) / 0.05;
+      var adding = Number.parseFloat(document.querySelector('.preview__zone').style.opacity)
+      var padding = Number.parseFloat(/\d+/.exec(document.querySelector('.preview__zone').style.paddingTop)[0])
+      for (var i = 0; i < counter; i++) {
+        obj[i] = setTimeout(() => {
+          if (!rub && document.querySelector('.preview__zone').style.opacity <= 10) {
+            adding -= 0.05
+            padding += 1
+            document.querySelector('.preview__zone').style.paddingTop = padding + 'px'
+            document.querySelector('.preview__zone').style.opacity = adding
+          }
+        }, 25 * i);
+      }
+      obj[20] = setTimeout(() => {
+        if (!rub) {
+          document.querySelector('.preview__zone').style.display = 'none'
+        }
+      }, 25 * counter);
+    }
+
+    var rub2 = true
+    var timer;
+    var timerRub = function(ctx) {
+      clearTimeout(timer)
+      timer = setTimeout(() => {
+        rub2 = true
+        replace(ctx)
+      }, 100)
+    }
+    var scrollLabel = function(ctx) {
+      if (rub2) {
+        timerRub(ctx)
+        rub2 = false
+        var second = ctx.parentNode.children[1]
+        second.scrollIntoView()
+      }
+      if (!rub2) {
+        timerRub(ctx)
+      }
+    }
+
+    var replace = function(ctx) {
+      var first = ctx.parentNode.children[0]
+      first.parentNode.style.scrollBehavior = 'auto'
+      first.scrollIntoView()
+      first.parentNode.style.scrollBehavior = 'smooth'
+    }
+
+    var radius = function() {
+      var tableRow = document.querySelectorAll('.table__row')
+      for (var i = 0; i < tableRow.length; i++) {
+        tableRow[i].children[0].style = 'border-start-start-radius: 5px; border-end-start-radius: 5px;'
+        tableRow[i].children[tableRow[i].children.length - 1].style = 'border-end-end-radius: 5px; border-start-end-radius: 5px;'
+
+      }
+    }
+
+    var leftBClick = function() {
+      //document.querySelector('#myVideo').style = 'right: 0%'
+      document.querySelector('#flVideo').style = 'right: -100%'
+    }
+
+    var rightBClick = function() {
+      //document.querySelector('#myVideo').style = 'right: 100%'
+      document.querySelector('#flVideo').style = 'right: 0%'
+    }
+    radius()
+
+    var progressCircle = function(el) {
+      var VCON = el.duration / 12
+      var vcut = el.currentTime
+      var vctn = [0, 0]
+      for (var i = 0; i < 12; i++) {
+        vctn[0] += VCON
+        if (vcut < vctn[0]) {
+          vctn[1] = i
+          i = 12
+        }
+      }
+
+      recursiver(VCON * 1000, vctn[1])
+    }
+    var pimg = document.querySelectorAll('.progress-bar__img')
+
+    var consrv = 0
+    var recursiver = function(one, on) {
+      setTimeout(function tick(timing, num, eln) {
+        document.querySelectorAll('.pdu__button')[eln].style = 'background-image: url("../img/animation/' + num + '.png");'
+        num = (num < 11) * 1 * (num + 1) + 0
+        timerId = setTimeout(tick, timing, timing, num, eln);
+      }, 0, one, on, consrv);
+      consrv++
+    }
+
+    let pstarter = document.querySelectorAll('video')[0]
+    pstarter.oncanplaythrough = function() {
+      if (!consrv) {
+        var els = document.querySelectorAll('video')
+        for (var i = 0; i < els.length; i++) {
+          progressCircle(els[i])
+        }
+      }
+    }
+    //pstarter(false)
+  </script>
+  <script type="text/javascript">
+    var x, i, j, selElmnt, a, b, c;
+    /*look for any elements with the class "custom-select":*/
+    x = document.getElementsByClassName("custom-select");
+    for (i = 0; i < x.length; i++) {
+      selElmnt = x[i].getElementsByTagName("select")[0];
+      /*for each element, create a new DIV that will act as the selected item:*/
+      a = document.createElement("DIV");
+      a.setAttribute("class", "select-selected");
+      a.innerHTML += "<p style='padding:7px; margin:0;'>" + selElmnt.options[selElmnt.selectedIndex].innerHTML + "</p>";
+      x[i].appendChild(a);
+      /*for each element, create a new DIV that will contain the option list:*/
+      b = document.createElement("DIV");
+      b.setAttribute("class", "select-items select-hide");
+      for (j = 0; j < selElmnt.length; j++) {
+        /*for each option in the original select element,
+        create a new DIV that will act as an option item:*/
+        c = document.createElement("DIV");
+        c.innerHTML = selElmnt.options[j].innerHTML;
+        c.addEventListener("click", function(e) {
+          /*when an item is clicked, update the original select box,
+          and the selected item:*/
+          var y, i, k, s, h;
+          s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+          h = this.parentNode.previousSibling;
+          for (i = 0; i < s.length; i++) {
+            if (s.options[i].innerHTML == this.innerHTML) {
+              s.selectedIndex = i;
+              h.innerHTML = "<p style='padding:7px; margin:0;'>" + this.innerHTML + "</p>";
+              y = this.parentNode.getElementsByClassName("same-as-selected");
+              for (k = 0; k < y.length; k++) {
+                y[k].removeAttribute("class");
+              }
+              this.setAttribute("class", "same-as-selected");
+              break;
+            }
+          }
+          h.click();
+        });
+        b.appendChild(c);
+      }
+      x[i].appendChild(b);
+      a.addEventListener("click", function(e) {
+        /*when the select box is clicked, close any other select boxes,
+        and open/close the current select box:*/
+        e.stopPropagation();
+        closeAllSelect(this);
+        this.nextSibling.classList.toggle("select-hide");
+        this.classList.toggle("select-arrow-active");
+        document.querySelector('.complex-choosing').children[0].classList.toggle("hidden")
+      });
+    }
+
+    function closeAllSelect(elmnt) {
+      /*a function that will close all select boxes in the document,
+      except the current select box:*/
+      var x, y, i, arrNo = [];
+      x = document.getElementsByClassName("select-items");
+      y = document.getElementsByClassName("select-selected");
+      for (i = 0; i < y.length; i++) {
+        if (elmnt == y[i]) {
+          arrNo.push(i)
+        } else {
+          y[i].classList.remove("select-arrow-active");
+        }
+      }
+      for (i = 0; i < x.length; i++) {
+        if (arrNo.indexOf(i)) {
+          x[i].classList.add("select-hide");
+        }
+      }
+    }
+    /*if the user clicks anywhere outside the select box,
+    then close all select boxes:*/
+    document.addEventListener("click", closeAllSelect);
+  </script>
+  <style media="screen">
+  </style>
+</body>
+
+</html>
